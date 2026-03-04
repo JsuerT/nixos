@@ -23,6 +23,7 @@
     vim
     git
     wget
+    jetbrains.webstorm
   ];
 
   # ... weitere gemeinsame Einstellungen (Networking, Sound etc.)

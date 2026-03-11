@@ -6,6 +6,8 @@
       ./hardware-configuration.nix
     ];
 
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Bootloader
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.enable = true; 

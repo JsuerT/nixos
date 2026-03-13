@@ -3,7 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+#      ./hardware-configuration.nix
     ];
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -35,6 +35,8 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
   };
+
+  hardware.graphics.enable=true;
 
   #bluetoothh
   hardware.bluetooth.enable=true;
@@ -88,6 +90,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
     git
+    xorg.xhost
     jetbrains.webstorm
     libreoffice-fresh
     fzf

@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 
+#variabeln definiert
 let
-  myVim = pkgs.vim-full.customize {
+  vimconfig = pkgs.vim-full.customize {
     name = "vim";
     vimrcConfig.packages.myVimPackage = {
       start = with pkgs.vimPlugins; [
@@ -18,7 +19,7 @@ let
         auto-pairs
         vim-autoformat
         vim-colors-solarized
-        coc-nvim # Nodejs bleibt in den Paketen für CoC Support
+        coc-nvim       
       ];
     };
 
@@ -62,6 +63,9 @@ let
     '';
   };
 in
+
+###################################################################################
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -94,9 +98,6 @@ in
     wireplumber.enable = true;
   };
 
-  # Fonts
-  fonts.packages = with pkgs; [ jetbrains-mono ];
-
   # User
   users.users.ticco = {
     isNormalUser = true;
@@ -111,17 +112,12 @@ in
   environment.systemPackages = with pkgs; [
     git curl wget htop ripgrep fd unzip zip
     nodejs # Notwendig für CoC in Vim
-    myVim
+    vimconfig
     wireshark
     firefox
     android-tools
   ];
 
-  # Umgebungsvariablen
-  environment.variables = {
-    EDITOR = "vim";
-    VISUAL = "vim";
-  };
 
   # Datenbank
   services.mysql = {
@@ -131,3 +127,5 @@ in
 
   system.stateVersion = "24.11";
 }
+
+

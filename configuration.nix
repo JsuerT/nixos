@@ -113,6 +113,7 @@ in
     nodejs # Notwendig für CoC in Vim
     myVim
     wireshark
+    firefox
   ];
 
   # Umgebungsvariablen

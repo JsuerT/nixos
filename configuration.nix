@@ -110,8 +110,21 @@ in
 
   # System Pakete
   environment.systemPackages = with pkgs; [
-    git curl wget htop ripgrep fd unzip zip
-    nodejs # Notwendig für CoC in Vim
+    git 
+    jdk21
+    curl 
+    wget 
+    htop 
+    ripgrep 
+    fd 
+    unzip 
+    zip
+
+    #für compilierne von latex 
+    texliveFull
+    biber
+
+    nodejs     
     vimconfig
     wireshark
     firefox

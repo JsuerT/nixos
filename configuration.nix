@@ -124,6 +124,7 @@ in
     texliveFull
     biber
 
+    discord
     nodejs     
     vimconfig
     wireshark

@@ -135,7 +135,7 @@ in
   ];
 
   environment.shellAliases={
-    bye="shutdown now";
+    "bye"="shutdown now";
   };
 
   # Datenbank

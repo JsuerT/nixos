@@ -134,6 +134,9 @@ in
     arduino
   ];
 
+  environment.shellAliases={
+    bye="shutdown now";
+  };
 
   # Datenbank
   services.mysql = {

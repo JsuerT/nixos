@@ -89,6 +89,17 @@ in
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  services.fprintd = {
+    enable = true; 
+    tod = {
+      enable = true; 
+      driver = pkgs.libfprint-2-tod1-goodix; 
+    };
+  };
+  security.pam.services.login.fprintAuth = true; 
+  security.pam.services.sudo.fprintAuth = true; 
+  services.fwupd.enable = true; 
+
   # Audio
   security.rtkit.enable = true;
   services.pipewire = {
@@ -135,7 +146,7 @@ in
   ];
 
   environment.shellAliases={
-    "bye"="shutdown now";
+   "bye"="shutdown now";
   };
 
   # Datenbank

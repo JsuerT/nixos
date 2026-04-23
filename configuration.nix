@@ -89,6 +89,7 @@ in
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  #fingerprint
   services.fprintd = {
     enable = true; 
     tod = {
@@ -146,7 +147,9 @@ in
   ];
 
   environment.shellAliases={
-   "bye"="shutdown now";
+   bye="shutdown now";
+    Ergo="cd /run/media/ticco/INTENSO/SchuleErgo";
+    Info="cd /run/media/ticco/INTENSO/Info";
   };
 
   # Datenbank

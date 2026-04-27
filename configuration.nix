@@ -150,6 +150,7 @@ in
    bye="shutdown now";
     Ergo="cd /run/media/ticco/INTENSO/SchuleErgo";
     Info="cd /run/media/ticco/INTENSO/Info";
+    ".." = "cd ..";
   };
 
   # Datenbank

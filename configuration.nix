@@ -101,6 +101,15 @@ in
   security.pam.services.sudo.fprintAuth = true; 
   services.fwupd.enable = true; 
 
+  #touchscreen
+#funktioniert nicht :/
+
+#  boot.kernelParams = [ "psmouse.synaptics_intertouch=1" "i2c_designware.forcing_timing=1""ic2_hid.noselftest=1"];
+ # boot.initrd.kernelModules = [ "i2c_hid_acpi" "hid_multitouch" "raydium_i2c_ts" ];
+ # boot.kernelModules = [ "hid_multitouch" "i2c_hid_acpi" ];
+ # services.libinput.enable = true;
+
+
   # Audio
   security.rtkit.enable = true;
   services.pipewire = {
@@ -150,7 +159,8 @@ in
    bye="shutdown now";
     Ergo="cd /run/media/ticco/INTENSO/SchuleErgo";
     Info="cd /run/media/ticco/INTENSO/Info";
-    ".." = "cd ..";
+    ".."= "cd ..";
+
   };
 
   # Datenbank

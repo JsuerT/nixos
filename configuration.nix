@@ -140,6 +140,7 @@ in
     fd 
     unzip 
     zip
+    htop
 
     #für compilierne von latex 
     texliveFull
